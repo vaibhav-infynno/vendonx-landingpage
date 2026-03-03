@@ -102,7 +102,7 @@ export default function Footer() {
         {/* Divider + Bottom */}
         <div className="border-t pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-white/10">
           <p className="text-xs text-white/35">
-            © 2025 Infynno Solutions LLP. All rights reserved.
+            © 2026 Infynno Solutions LLP. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link href="#" className="text-xs transition-colors hover:text-white text-white/35">
