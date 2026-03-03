@@ -27,7 +27,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? "py-3 backdrop-blur-xl bg-background/70 shadow-md border-b" : "py-5"
+          scrolled || mobileOpen ? "py-3 backdrop-blur-xl bg-background/70 shadow-md" : "py-5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -84,7 +84,7 @@ export default function Navbar() {
           }`}
         >
           <nav className="overflow-hidden">
-            <div className="bg-background shadow-lg px-6 py-4 flex flex-col gap-4 border-b">
+            <div className="px-6 pb-6 pt-2 flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.label}

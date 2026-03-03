@@ -25,7 +25,7 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-6 lg:gap-4 relative">
           {steps.map((step, i) => {
             const Icon = step.icon;
             return (
