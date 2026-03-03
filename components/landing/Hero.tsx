@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="absolute -bottom-20 right-1/4 w-80 h-80 bg-brand-sky/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 py-16">
-        <div className="flex flex-col lg:flex-row items-center gap-14">
+        <div className="flex flex-col lg:flex-row items-center gap-14 xl:gap-50">
 
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
@@ -40,22 +40,18 @@ export default function Hero() {
               
               <a
                 href="#download"
-                className="inline-flex items-center justify-center gap-3 bg-gradient-orange 
-                           text-white px-8 py-4 rounded-2xl font-semibold text-base 
-                           shadow-lg hover:scale-105 transition duration-300"
+                className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-brand-purple to-brand-violet text-white px-8 py-4 rounded-2xl font-semibold text-base shadow-orange hover:opacity-90 hover:scale-[1.02] transition-all"
               >
-                <Download size={20} />
+                <Download size={20} strokeWidth={2} />
                 Download for Android
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition" />
+                <ArrowRight size={18} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />
               </a>
 
               <a
                 href="#download"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl 
-                           font-semibold text-base border border-brand-purple/30 text-brand-purple 
-                           bg-brand-purple-light hover:bg-brand-purple/20 transition"
+                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-semibold text-base border-2 border-brand-purple/30 text-brand-purple bg-brand-purple/5 hover:bg-brand-purple/10 hover:border-brand-purple/40 hover:scale-[1.02] transition-all"
               >
-                <Download size={20} />
+                <Download size={20} strokeWidth={2} />
                 Download for iOS
               </a>
             </div>

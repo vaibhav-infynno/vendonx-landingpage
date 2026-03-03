@@ -25,7 +25,7 @@ export default function PhoneFrame({
       
       {/* Glow Effect (optional) */}
       {glow && (
-        <div className="absolute -inset-10 bg-[image:var(--gradient-hero)] blur-3xl opacity-30 rounded-full pointer-events-none" />
+        <div className="absolute -inset-10 bg-[image:var(--gradient-hero)] blur-3xl opacity-15 rounded-full pointer-events-none" />
       )}
 
       {/* Phone Image Only */}

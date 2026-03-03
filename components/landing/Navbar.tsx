@@ -60,12 +60,9 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Link
               href="#download"
-              className="bg-gradient-orange 
-                         text-white px-6 py-2.5 rounded-full text-sm 
-                         font-medium flex items-center gap-2 
-                         shadow-lg hover:scale-105 transition"
+              className="bg-gradient-to-r from-brand-purple to-brand-violet text-white px-7 py-2.5 rounded-2xl text-[15px] font-semibold flex items-center gap-2.5 shadow-orange hover:opacity-90 hover:scale-[1.02] transition-all"
             >
-              <Download size={16} />
+              <Download size={18} strokeWidth={2} />
               Download App
             </Link>
           </div>
@@ -101,11 +98,9 @@ export default function Navbar() {
 
             <Link
               href="#download"
-              className="bg-gradient-orange 
-                         text-primary-foreground px-6 py-3 rounded-full 
-                         flex items-center justify-center gap-2"
+              className="bg-gradient-to-r from-brand-purple to-brand-violet text-white px-7 py-3.5 rounded-2xl text-base font-semibold flex items-center justify-center gap-2.5 shadow-orange hover:opacity-90 hover:scale-[1.02] transition-all"
             >
-              <Download size={18} />
+              <Download size={20} strokeWidth={2} />
               Download App
             </Link>
           </div>
