@@ -42,8 +42,8 @@ export default function FAQ() {
             </FadeIn>
           </div>
 
-          <div className="flex-1 space-y-3">
-            <FadeIn delay={0.2}>
+          <div className="flex-1">
+            <FadeIn delay={0.2} className="space-y-3">
               {faqs.map((faq, i) => {
                 const isOpen = open === i;
                 return (

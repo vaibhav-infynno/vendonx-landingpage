@@ -30,8 +30,8 @@ export default function Pricing() {
           <div className="max-w-2xl mx-auto">
             <div className="relative rounded-3xl overflow-hidden border bg-card border-brand-purple/20 shadow-orange">
 
-              <div className="absolute top-6 right-6 flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold bg-gradient-to-br from-brand-sky to-brand-purple text-white shadow-sm">
-                <Gift size={13} />
+              <div className="absolute top-4 right-4 md:top-6 md:right-6 flex items-center gap-1.5 md:gap-2 rounded-full px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-xs font-bold bg-gradient-to-br from-brand-sky to-brand-purple text-white shadow-sm">
+                <Gift size={12} className="md:w-[13px] md:h-[13px]" />
                 Limited Period Offer
               </div>
 
