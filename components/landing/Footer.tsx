@@ -13,7 +13,7 @@ const footerLinks = {
     { label: "FAQ", href: "/#faq" },
     { label: "Contact Us", href: "/#contact" },
     { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms of Service", href: "#" },
+    { label: "Terms of Service", href: "/terms-and-conditions" },
   ],
 };
 
@@ -108,7 +108,7 @@ export default function Footer() {
             <Link href="/privacy-policy" className="text-xs transition-colors hover:text-white text-white/35">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-xs transition-colors hover:text-white text-white/35">
+            <Link href="/terms-and-conditions" className="text-xs transition-colors hover:text-white text-white/35">
               Terms of Service
             </Link>
           </div>

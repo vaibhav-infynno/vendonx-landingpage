@@ -1,7 +1,7 @@
 import Footer from "@/components/landing/Footer";
 import Navbar from "@/components/landing/Navbar";
 
-export default function PrivacyPolicy() {
+export default function TermsAndConditions() {
   return (
     <>
       <Navbar />
@@ -13,68 +13,92 @@ export default function PrivacyPolicy() {
         </div>
 
         <div className="container mx-auto px-6 max-w-4xl relative z-10">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 text-brand-dark">Privacy Policy</h1>
+          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 text-brand-dark">Terms and Conditions</h1>
           <p className="text-muted-foreground mb-10 font-medium">Last updated: November 1, 2025</p>
           
           <div className="prose prose-slate max-w-none text-muted-foreground space-y-8 bg-white/50 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-white/20 shadow-sm leading-relaxed">
             <p className="text-lg text-foreground font-medium">
-              Welcome to VendoNX, a mobile app designed to help service providers manage their business easily. We respect your privacy and are committed to protecting your personal information.
+              By using the VendoNX app, you agree to the following terms:
             </p>
             
             <section>
               <h2 className="text-xl font-bold text-brand-dark mb-4 flex items-center gap-2">
                 <span className="w-8 h-8 rounded-full bg-brand-purple/10 text-brand-purple flex items-center justify-center text-sm">1</span>
-                Information We Collect
+                Using the App
               </h2>
-              <p>We collect basic information such as your name, phone number, business name, location, and customer details. Payment and transaction details (if you use our invoice or wallet features) and device information may also be collected.</p>
+              <p>VendoNX helps vendors manage customers, jobs, and payments. Do not use it for illegal or harmful activities.</p>
             </section>
             
             <section>
               <h2 className="text-xl font-bold text-brand-dark mb-4 flex items-center gap-2">
                 <span className="w-8 h-8 rounded-full bg-brand-purple/10 text-brand-purple flex items-center justify-center text-sm">2</span>
-                How We Use Your Information
+                Account Responsibility
               </h2>
-              <p>Your information is used to manage your account, send reminders, generate invoices, and improve app performance.</p>
+              <p>Provide correct details during registration and keep your password secure.</p>
             </section>
             
             <section>
               <h2 className="text-xl font-bold text-brand-dark mb-4 flex items-center gap-2">
                 <span className="w-8 h-8 rounded-full bg-brand-purple/10 text-brand-purple flex items-center justify-center text-sm">3</span>
-                Sharing of Information
+                Payments and Transactions
               </h2>
-              <p>We only share your data with WhatsApp/SMS gateways or payment partners when needed. We never sell your information.</p>
+              <p>All transactions between you and your customers are your responsibility. VendoNX is not liable for disputes or unpaid bills.</p>
             </section>
             
             <section>
               <h2 className="text-xl font-bold text-brand-dark mb-4 flex items-center gap-2">
                 <span className="w-8 h-8 rounded-full bg-brand-purple/10 text-brand-purple flex items-center justify-center text-sm">4</span>
-                Data Security
+                Notifications & Reminders
               </h2>
-              <p>Your data is securely stored using encryption and trusted servers. Please keep your login credentials safe.</p>
+              <p>Automatic WhatsApp or SMS reminders are for business use only. You are responsible for compliance with local laws.</p>
             </section>
             
             <section>
               <h2 className="text-xl font-bold text-brand-dark mb-4 flex items-center gap-2">
                 <span className="w-8 h-8 rounded-full bg-brand-purple/10 text-brand-purple flex items-center justify-center text-sm">5</span>
-                Your Control
+                Subscription and Charges
               </h2>
-              <p>You can edit or delete your account anytime by contacting the support team.</p>
+              <p>Some features may require payment. Fees will be clearly shown before purchase.</p>
             </section>
             
             <section>
               <h2 className="text-xl font-bold text-brand-dark mb-4 flex items-center gap-2">
                 <span className="w-8 h-8 rounded-full bg-brand-purple/10 text-brand-purple flex items-center justify-center text-sm">6</span>
-                Updates to Policy
+                Limitation of Liability
               </h2>
-              <p>We may update this Privacy Policy when new features are added.</p>
+              <p>VendoNX provides tools but does not guarantee business outcomes or payments.</p>
             </section>
             
             <section>
               <h2 className="text-xl font-bold text-brand-dark mb-4 flex items-center gap-2">
                 <span className="w-8 h-8 rounded-full bg-brand-purple/10 text-brand-purple flex items-center justify-center text-sm">7</span>
+                Intellectual Property
+              </h2>
+              <p>The VendoNX name, logo, and content belong to us. Do not copy or reuse without permission.</p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-brand-dark mb-4 flex items-center gap-2">
+                <span className="w-8 h-8 rounded-full bg-brand-purple/10 text-brand-purple flex items-center justify-center text-sm">8</span>
+                Termination
+              </h2>
+              <p>We may suspend accounts in case of misuse. You may stop using the app anytime.</p>
+            </section>
+
+            <section>
+              <h2 className="text-xl font-bold text-brand-dark mb-4 flex items-center gap-2">
+                <span className="w-8 h-8 rounded-full bg-brand-purple/10 text-brand-purple flex items-center justify-center text-sm">9</span>
+                Governing Law
+              </h2>
+              <p>These terms are governed by the laws of India and under Ahmedabad jurisdiction.</p>
+            </section>
+            
+            <section>
+              <h2 className="text-xl font-bold text-brand-dark mb-4 flex items-center gap-2">
+                <span className="w-8 h-8 rounded-full bg-brand-purple/10 text-brand-purple flex items-center justify-center text-sm">10</span>
                 Contact Us
               </h2>
-              <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+              <p>If you have any questions about these Terms and Conditions, please contact us at:</p>
               <div className="mt-6 p-6 bg-gradient-to-r from-brand-purple/5 to-brand-violet/5 rounded-2xl border border-brand-purple/10 inline-block">
                 <p className="font-semibold text-foreground flex items-center gap-2">
                   <span className="text-brand-purple">Phone:</span> 
