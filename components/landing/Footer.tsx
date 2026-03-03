@@ -4,15 +4,15 @@ import Link from "next/link";
 
 const footerLinks = {
   Product: [
-    { label: "Features", href: "#features" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Download", href: "#download" },
+    { label: "Features", href: "/#features" },
+    { label: "How It Works", href: "/#how-it-works" },
+    { label: "Pricing", href: "/#pricing" },
+    { label: "Download", href: "/#download" },
   ],
   Support: [
-    { label: "FAQ", href: "#faq" },
-    { label: "Contact Us", href: "#contact" },
-    { label: "Privacy Policy", href: "#" },
+    { label: "FAQ", href: "/#faq" },
+    { label: "Contact Us", href: "/#contact" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms of Service", href: "#" },
   ],
 };
@@ -91,7 +91,7 @@ export default function Footer() {
               ))}
             </div>
 
-            <Link href="#download"
+            <Link href="/#download"
               className="inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all duration-200 bg-white/10 text-white/80 border border-white/10 hover:bg-white/20 hover:text-white">
               Download App
               <ArrowRight size={14} />
@@ -105,7 +105,7 @@ export default function Footer() {
             © 2026 Infynno Solutions LLP. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="text-xs transition-colors hover:text-white text-white/35">
+            <Link href="/privacy-policy" className="text-xs transition-colors hover:text-white text-white/35">
               Privacy Policy
             </Link>
             <Link href="#" className="text-xs transition-colors hover:text-white text-white/35">

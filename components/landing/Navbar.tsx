@@ -6,11 +6,11 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const navLinks = [
-  { label: "Why Us", href: "#pain-points" },
-  { label: "Features", href: "#features" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Why Us", href: "/#pain-points" },
+  { label: "Features", href: "/#features" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -59,7 +59,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden md:block">
             <Link
-              href="#download"
+              href="/#download"
               className="bg-gradient-to-r from-brand-purple to-brand-violet text-white px-7 py-2.5 rounded-2xl text-[15px] font-semibold flex items-center gap-2.5 shadow-orange hover:opacity-90 hover:scale-[1.02] transition-all"
             >
               <Download size={18} strokeWidth={2} />
@@ -97,7 +97,7 @@ export default function Navbar() {
             ))}
 
             <Link
-              href="#download"
+              href="/#download"
               className="bg-gradient-to-r from-brand-purple to-brand-violet text-white px-7 py-3.5 rounded-2xl text-base font-semibold flex items-center justify-center gap-2.5 shadow-orange hover:opacity-90 hover:scale-[1.02] transition-all"
             >
               <Download size={20} strokeWidth={2} />
