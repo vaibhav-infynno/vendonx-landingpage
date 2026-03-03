@@ -6,8 +6,8 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center overflow-hidden pt-28 bg-gradient-to-br from-background via-brand-purple-light to-brand-sky-light">
       
       {/* Decorative blur blobs */}
-      <div className="absolute -top-24 -left-16 w-96 h-96 bg-brand-purple/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-20 right-1/4 w-80 h-80 bg-brand-sky/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-24 -left-16 w-96 h-96 bg-brand-purple/20 rounded-full blur-3xl pointer-events-none animate-blob" />
+      <div className="absolute -bottom-20 right-1/4 w-80 h-80 bg-brand-sky/20 rounded-full blur-3xl pointer-events-none animate-blob [animation-delay:1s]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 py-16">
         <div className="flex flex-col lg:flex-row items-center gap-14 xl:gap-50">
@@ -16,7 +16,7 @@ export default function Hero() {
           <div className="flex-1 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
 
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6 text-sm font-semibold bg-brand-purple-light text-brand-purple border border-brand-purple/20">
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6 text-sm font-semibold bg-brand-purple-light text-brand-purple border border-brand-purple">
               <Star size={14} fill="currentColor" stroke="none" />
               Trusted by 1,000+ vendors across India
             </div>
@@ -49,7 +49,7 @@ export default function Hero() {
 
               <a
                 href="#download"
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-semibold text-base border-2 border-brand-purple/30 text-brand-purple bg-brand-purple/5 hover:bg-brand-purple/10 hover:border-brand-purple/40 hover:scale-[1.02] transition-all"
+                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-semibold text-base border-2 border-brand-purple text-brand-purple bg-brand-purple/5 hover:bg-brand-purple/10 hover:border-brand-purple/40 hover:scale-[1.02] transition-all"
               >
                 <Download size={20} strokeWidth={2} />
                 Download for iOS

@@ -6,8 +6,8 @@ export default function FinalCTA() {
     <section id="download" className="py-14 md:py-20 relative overflow-hidden bg-brand-dark">
 
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-        <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full opacity-10 blur-3xl bg-brand-purple" />
-        <div className="absolute bottom-[-20%] left-[-5%] w-[400px] h-[400px] rounded-full opacity-10 blur-3xl bg-brand-sky" />
+        <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full opacity-10 blur-3xl bg-brand-purple animate-blob" />
+        <div className="absolute bottom-[-20%] left-[-5%] w-[400px] h-[400px] rounded-full opacity-10 blur-3xl bg-brand-sky animate-blob [animation-delay:2s]" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
