@@ -1,5 +1,6 @@
 "use client";
 
+import { FadeIn } from "@/components/ui/FadeIn";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
 
@@ -25,41 +26,45 @@ export default function FAQ() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           <div className="lg:w-[360px] flex-shrink-0">
-            <div className="lg:sticky lg:top-32">
-              <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest border border-brand-purple/30 text-brand-purple bg-brand-purple/5">
-                ✦ FAQ
+            <FadeIn>
+              <div className="lg:sticky lg:top-32">
+                <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest border border-brand-purple/30 text-brand-purple bg-brand-purple/5">
+                  ✦ FAQ
+                </div>
+                <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-foreground">
+                  Got Questions?{" "}
+                  <span className="text-brand-purple">We've Got Answers.</span>
+                </h2>
+                <p className="text-base text-muted-foreground">
+                  Everything you need to know about VendoNX. Can't find what you're looking for? Contact us below.
+                </p>
               </div>
-              <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-foreground">
-                Got Questions?{" "}
-                <span className="text-brand-purple">We've Got Answers.</span>
-              </h2>
-              <p className="text-base text-muted-foreground">
-                Everything you need to know about VendoNX. Can't find what you're looking for? Contact us below.
-              </p>
-            </div>
+            </FadeIn>
           </div>
 
           <div className="flex-1 space-y-3">
-            {faqs.map((faq, i) => {
-              const isOpen = open === i;
-              return (
-                <div key={i} className={`rounded-2xl border overflow-hidden transition-all duration-300 ${isOpen ? 'border-brand-purple/40 bg-card shadow-lg shadow-brand-purple/5' : 'border-border bg-card/70 hover:bg-card'}`}>
-                  <button className="w-full flex items-center justify-between p-5 text-left gap-4 min-h-[56px]"
-                    onClick={() => setOpen(isOpen ? null : i)} aria-expanded={isOpen}>
-                    <h3 className="font-display font-semibold text-base text-foreground">{faq.q}</h3>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-200 ${isOpen ? 'bg-brand-purple text-white' : 'bg-brand-purple/10 text-brand-purple'}`}>
-                      {isOpen ? <Minus size={16} /> : <Plus size={16} />}
-                    </div>
-                  </button>
+            <FadeIn delay={0.2}>
+              {faqs.map((faq, i) => {
+                const isOpen = open === i;
+                return (
+                  <div key={i} className={`rounded-2xl border overflow-hidden transition-all duration-300 ${isOpen ? 'border-brand-purple/40 bg-card shadow-lg shadow-brand-purple/5' : 'border-border bg-card/70 hover:bg-card'}`}>
+                    <button className="w-full flex items-center justify-between p-5 text-left gap-4 min-h-[56px]"
+                      onClick={() => setOpen(isOpen ? null : i)} aria-expanded={isOpen}>
+                      <h3 className="font-display font-semibold text-base text-foreground">{faq.q}</h3>
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-200 ${isOpen ? 'bg-brand-purple text-white' : 'bg-brand-purple/10 text-brand-purple'}`}>
+                        {isOpen ? <Minus size={16} /> : <Plus size={16} />}
+                      </div>
+                    </button>
 
-                  <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                    <div className="px-5 pb-5">
-                      <p className="text-base leading-relaxed text-muted-foreground">{faq.a}</p>
+                    <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                      <div className="px-5 pb-5">
+                        <p className="text-base leading-relaxed text-muted-foreground">{faq.a}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </FadeIn>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { FadeIn } from "@/components/ui/FadeIn";
 import {
     AlertTriangle,
     BarChart2,
@@ -35,60 +36,66 @@ export default function Features() {
     <section id="features" className="py-14 md:py-20 relative overflow-hidden bg-gradient-to-b from-background to-brand-purple-light/30">
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest border border-brand-purple/30 text-brand-purple bg-brand-purple/5">
-            ✦ Core Features
+        <FadeIn>
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest border border-brand-purple/30 text-brand-purple bg-brand-purple/5">
+              ✦ Core Features
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-3 text-foreground">
+              Everything You Need to Run a{" "}
+              <span className="text-brand-purple">Smarter Service Business</span>
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto text-muted-foreground">
+              Powerful tools built specifically for Indian service professionals — simple, fast, and reliable.
+            </p>
           </div>
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-3 text-foreground">
-            Everything You Need to Run a{" "}
-            <span className="text-brand-purple">Smarter Service Business</span>
-          </h2>
-          <p className="text-lg max-w-2xl mx-auto text-muted-foreground">
-            Powerful tools built specifically for Indian service professionals — simple, fast, and reliable.
-          </p>
-        </div>
+        </FadeIn>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
-          {features.map((f) => {
+          {features.map((f, i) => {
             const Icon = f.icon;
             return (
-              <div key={f.title}
-                className="group rounded-2xl p-6 border transition-all duration-300 cursor-default hover:shadow-lg hover:-translate-y-1 bg-card border-border shadow-sm">
-                <div className={`mb-4 w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${f.bg}`}>
-                  <Icon size={22} className={f.color} />
+              <FadeIn key={f.title} delay={i * 0.1}>
+                <div
+                  className="group rounded-2xl p-6 border transition-all duration-300 cursor-default hover:shadow-lg hover:-translate-y-1 bg-card border-border shadow-sm h-full">
+                  <div className={`mb-4 w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${f.bg}`}>
+                    <Icon size={22} className={f.color} />
+                  </div>
+                  <h3 className="font-display font-bold text-base mb-2 text-foreground">
+                    {f.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {f.desc}
+                  </p>
                 </div>
-                <h3 className="font-display font-bold text-base mb-2 text-foreground">
-                  {f.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {f.desc}
-                </p>
-              </div>
+              </FadeIn>
             );
           })}
         </div>
 
         {/* Coming Soon */}
-        <div className="mt-8 text-center">
-          <p className="text-xs font-bold uppercase tracking-widest mb-5 text-muted-foreground">
-            Coming Soon
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {comingSoon.map((c) => {
-              const Icon = c.icon;
-              return (
-                <div key={c.title}
-                  className="flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium border-2 border-dashed border-brand-purple/30 text-brand-purple bg-brand-purple/5">
-                  <Icon size={15} />
-                  {c.title}
-                  <span className="text-xs font-bold rounded-full px-2 py-0.5 ml-1 bg-brand-purple text-white">
-                    Soon
-                  </span>
-                </div>
-              );
-            })}
+        <FadeIn delay={0.4}>
+          <div className="mt-8 text-center">
+            <p className="text-xs font-bold uppercase tracking-widest mb-5 text-muted-foreground">
+              Coming Soon
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {comingSoon.map((c) => {
+                const Icon = c.icon;
+                return (
+                  <div key={c.title}
+                    className="flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium border-2 border-dashed border-brand-purple/30 text-brand-purple bg-brand-purple/5">
+                    <Icon size={15} />
+                    {c.title}
+                    <span className="text-xs font-bold rounded-full px-2 py-0.5 ml-1 bg-brand-purple text-white">
+                      Soon
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

@@ -1,3 +1,4 @@
+import { FadeIn } from "@/components/ui/FadeIn";
 import { Quote, Star } from "lucide-react";
 
 export const testimonials = [
@@ -11,43 +12,47 @@ export default function Testimonials() {
   return (
     <section className="py-14 md:py-20 bg-gradient-to-b from-background to-brand-purple-light/50">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-10">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-foreground">
-            What Our Vendors Say
-          </h2>
-          <p className="text-lg max-w-xl mx-auto text-muted-foreground">
-            Real stories from real service professionals across India
-          </p>
-        </div>
+        <FadeIn>
+          <div className="text-center mb-10">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              What Our Vendors Say
+            </h2>
+            <p className="text-lg max-w-xl mx-auto text-muted-foreground">
+              Real stories from real service professionals across India
+            </p>
+          </div>
+        </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {testimonials.map((t) => (
-            <div key={t.name}
-              className="rounded-2xl p-6 border transition-all duration-300 relative bg-card border-border shadow-sm hover:shadow-md"
-            >
-              <Quote size={40} className={`absolute top-5 right-5 opacity-10 ${t.colorClass}`} />
+          {testimonials.map((t, i) => (
+            <FadeIn key={t.name} delay={i * 0.1}>
+              <div
+                className="rounded-2xl p-6 border transition-all duration-300 relative bg-card border-border shadow-sm hover:shadow-md h-full"
+              >
+                <Quote size={40} className={`absolute top-5 right-5 opacity-10 ${t.colorClass}`} />
 
-              <div className="flex gap-1 mb-4">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} size={16} fill="currentColor" stroke="none" className={t.colorClass} />
-                ))}
-              </div>
-
-              <p className="text-base leading-relaxed mb-6 italic text-foreground/80" lang={t.lang}>
-                "{t.text}"
-              </p>
-
-              <div className="flex items-center gap-3">
-                <div className={`w-11 h-11 rounded-full flex items-center justify-center font-display font-bold text-lg flex-shrink-0 text-white ${t.bgClass}`}
-                >
-                  {t.avatar}
+                <div className="flex gap-1 mb-4">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} size={16} fill="currentColor" stroke="none" className={t.colorClass} />
+                  ))}
                 </div>
-                <div>
-                  <div className="font-display font-bold text-sm text-foreground">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role}</div>
+
+                <p className="text-base leading-relaxed mb-6 italic text-foreground/80" lang={t.lang}>
+                  "{t.text}"
+                </p>
+
+                <div className="flex items-center gap-3">
+                  <div className={`w-11 h-11 rounded-full flex items-center justify-center font-display font-bold text-lg flex-shrink-0 text-white ${t.bgClass}`}
+                  >
+                    {t.avatar}
+                  </div>
+                  <div>
+                    <div className="font-display font-bold text-sm text-foreground">{t.name}</div>
+                    <div className="text-xs text-muted-foreground">{t.role}</div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>
