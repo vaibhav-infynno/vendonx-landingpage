@@ -19,7 +19,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handler);
+    window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
@@ -27,7 +27,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? "py-3 backdrop-blur-xl bg-white/70 shadow-md" : "py-5"
+          scrolled ? "py-3 backdrop-blur-xl bg-background/70 shadow-md border-b" : "py-5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -49,7 +49,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-gray-700 hover:text-purple-600 transition"
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition"
               >
                 {link.label}
               </Link>
@@ -60,7 +60,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Link
               href="#download"
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 
+              className="bg-gradient-orange 
                          text-white px-6 py-2.5 rounded-full text-sm 
                          font-medium flex items-center gap-2 
                          shadow-lg hover:scale-105 transition"
@@ -82,17 +82,18 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden transition-all duration-300 overflow-hidden ${
-            mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          className={`md:hidden grid transition-all duration-300 ease-in-out ${
+            mobileOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
           }`}
         >
-          <div className="bg-white shadow-lg px-6 py-4 flex flex-col gap-4">
+          <nav className="overflow-hidden">
+            <div className="bg-background shadow-lg px-6 py-4 flex flex-col gap-4 border-b">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-base font-medium text-gray-700"
+                className="text-base font-medium text-foreground"
               >
                 {link.label}
               </Link>
@@ -100,14 +101,15 @@ export default function Navbar() {
 
             <Link
               href="#download"
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 
-                         text-white px-6 py-3 rounded-full 
+              className="bg-gradient-orange 
+                         text-primary-foreground px-6 py-3 rounded-full 
                          flex items-center justify-center gap-2"
             >
               <Download size={18} />
               Download App
             </Link>
           </div>
+          </nav>
         </div>
       </header>
     </>

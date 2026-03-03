@@ -12,7 +12,8 @@ export default function PhoneFrame({
   alt = "VendoNX App",
   className = "",
   glow = false,
-}: PhoneFrameProps) {
+  priority = false,
+}: PhoneFrameProps & { priority?: boolean }) {
   const sizeClasses = {
     lg: "w-[320px]",
     md: "w-[250px]",
@@ -24,7 +25,7 @@ export default function PhoneFrame({
       
       {/* Glow Effect (optional) */}
       {glow && (
-        <div className="absolute -inset-10 bg-gradient-to-br from-purple-500/30 to-sky-400/30 blur-3xl opacity-50 rounded-full pointer-events-none" />
+        <div className="absolute -inset-10 bg-[image:var(--gradient-hero)] blur-3xl opacity-30 rounded-full pointer-events-none" />
       )}
 
       {/* Phone Image Only */}
@@ -35,7 +36,8 @@ export default function PhoneFrame({
           width={500}
           height={1000}
           className="w-full h-auto object-contain"
-          priority={false}
+          priority={priority}
+          sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
     </div>

@@ -32,12 +32,12 @@ export const metadata: Metadata = {
     "AI vending solutions",
     "cashless vending",
   ],
-  metadataBase: new URL("https://yourdomain.com"), // ⚠️ change later
+  metadataBase: new URL("https://vendonx.com"),
   openGraph: {
     title: "VendoNX | Smart Vending Solutions",
     description:
       "Scale your retail business with VendoNX smart vending machine solutions.",
-    url: "https://yourdomain.com", // ⚠️ change later
+    url: "https://vendonx.com",
     siteName: "VendoNX",
     type: "website",
   },
