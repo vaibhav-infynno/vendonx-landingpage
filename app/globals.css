@@ -1,0 +1,157 @@
+@import "tailwindcss";
+/* =====================================================
+   VendoNX Global Theme System (Tailwind v4 Compatible)
+===================================================== */
+
+:root {
+  /* ================= Brand Colors ================= */
+
+  --brand-purple: 286 75% 48%;
+  --brand-purple-hover: 286 75% 42%;
+  --brand-purple-light: 286 75% 95%;
+
+  --brand-violet: 236 87% 48%;
+  --brand-violet-light: 236 87% 94%;
+
+  --brand-sky: 194 96% 53%;
+  --brand-sky-light: 194 96% 93%;
+
+  --brand-dark: 236 60% 18%;
+  --brand-dark-light: 236 60% 28%;
+  --brand-dark-deep: 236 60% 12%;
+
+  /* ================= Legacy Aliases ================= */
+
+  --brand-orange: var(--brand-purple);
+  --brand-orange-hover: var(--brand-purple-hover);
+  --brand-orange-light: var(--brand-purple-light);
+
+  --brand-yellow: var(--brand-sky);
+  --brand-yellow-light: var(--brand-sky-light);
+
+  --brand-crimson: var(--brand-violet);
+  --brand-crimson-light: var(--brand-violet-light);
+
+  --brand-blue: var(--brand-dark);
+  --brand-blue-light: var(--brand-dark-light);
+  --brand-blue-dark: var(--brand-dark-deep);
+
+  /* ================= Semantic Tokens ================= */
+
+  --background: 0 0% 100%;
+  --foreground: 236 60% 12%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 236 60% 12%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 236 60% 12%;
+
+  --primary: 286 75% 48%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 194 96% 53%;
+  --secondary-foreground: 236 60% 12%;
+
+  --muted: 230 20% 96%;
+  --muted-foreground: 236 16% 47%;
+
+  --accent: 236 87% 48%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 236 20% 90%;
+  --input: 236 20% 90%;
+  --ring: 286 75% 48%;
+
+  --radius: 0.75rem;
+
+  /* ================= Sidebar ================= */
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+
+  /* ================= Section Backgrounds ================= */
+
+  --section-white: 0 0% 100%;
+  --section-light: 236 20% 97%;
+  --section-warm: 286 30% 97%;
+  --section-blue: 236 60% 18%;
+
+  /* ================= Gradients ================= */
+
+  --gradient-hero: linear-gradient(135deg,
+      hsl(236 87% 38%) 0%,
+      hsl(286 75% 48%) 50%,
+      hsl(194 96% 53%) 100%);
+
+  --gradient-orange: linear-gradient(135deg,
+      hsl(286 75% 48%) 0%,
+      hsl(236 87% 48%) 100%);
+
+  --gradient-card: linear-gradient(145deg,
+      hsl(0 0% 100%) 0%,
+      hsl(236 20% 97%) 100%);
+
+  --gradient-crimson: linear-gradient(135deg,
+      hsl(236 87% 48%) 0%,
+      hsl(286 75% 48%) 100%);
+
+  /* ================= Shadows ================= */
+
+  --shadow-sm: 0 1px 3px hsl(286 75% 48% / 0.08);
+  --shadow-md: 0 4px 16px hsl(286 75% 48% / 0.12);
+  --shadow-lg: 0 8px 32px hsl(286 75% 48% / 0.16);
+  --shadow-orange: 0 4px 20px hsl(286 75% 48% / 0.35);
+  --shadow-blue: 0 4px 20px hsl(236 60% 18% / 0.35);
+}
+
+.dark {
+  --background: 236 60% 12%;
+  --foreground: 0 0% 100%;
+
+  --card: 236 60% 18%;
+  --card-foreground: 0 0% 100%;
+
+  --popover: 236 60% 18%;
+  --popover-foreground: 0 0% 100%;
+
+  --primary: 286 75% 58%;
+  --secondary: 194 96% 63%;
+  --muted: 236 30% 20%;
+  --muted-foreground: 236 20% 70%;
+
+  --border: 236 30% 25%;
+}
+
+/* =====================================================
+   Base Styles (Tailwind v4 Safe - NO @apply here)
+===================================================== */
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-poppins), var(--font-inter), system-ui, sans-serif;
+}
