@@ -10,14 +10,14 @@ export const freeFeatures = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-14 md:py-20 bg-gradient-to-b from-background to-muted">
+    <section id="pricing" className="py-14 md:py-20 bg-section-light">
       <div className="container mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest border border-brand-purple/30 text-brand-purple bg-brand-purple/5">
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest border border-brand-violet/20 text-brand-violet bg-brand-violet/5">
               ✦ Pricing
             </div>
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-brand-dark">
               Start Using VendoNX — Completely Free
             </h2>
             <p className="text-lg max-w-xl mx-auto text-muted-foreground">
@@ -28,35 +28,36 @@ export default function Pricing() {
 
         <FadeIn delay={0.2}>
           <div className="max-w-2xl mx-auto">
-            <div className="relative rounded-3xl overflow-hidden border bg-card border-brand-purple/20 shadow-orange">
+            <div className="relative rounded-3xl overflow-hidden border bg-background border-border"
+              style={{ boxShadow: "0 4px 24px hsl(0 0% 0% / 0.06)" }}>
 
-              <div className="absolute top-4 right-4 md:top-6 md:right-6 flex items-center gap-1.5 md:gap-2 rounded-full px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-xs font-bold bg-gradient-to-br from-brand-sky to-brand-purple text-white shadow-sm">
-                <Gift size={12} className="md:w-[13px] md:h-[13px]" />
+              <div className="absolute top-6 right-6 flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold bg-brand-sky text-white">
+                <Gift size={13} />
                 Limited Period Offer
               </div>
 
               <div className="p-8 md:p-10">
                 <div className="mb-8">
                   <div className="flex items-baseline gap-3 mb-2">
-                    <span className="font-display font-black text-7xl md:text-8xl bg-gradient-orange bg-clip-text text-transparent">
+                    <span className="font-display font-black text-7xl md:text-8xl text-brand-violet">
                       ₹0
                     </span>
                     <div>
-                      <div className="font-semibold text-lg text-foreground">/ month</div>
+                      <div className="font-semibold text-lg text-brand-dark">/ month</div>
                       <div className="text-sm line-through text-muted-foreground">₹200 / month</div>
                     </div>
                   </div>
                   <p className="text-base text-muted-foreground">
-                    Full access to all features — free for the next <span className="font-bold text-brand-purple">4–6 months</span> while we launch.
+                    Full access to all features — free for the next <span className="font-bold text-brand-violet">4–6 months</span> while we launch.
                   </p>
                 </div>
 
-                <div className="flex items-start gap-3 rounded-2xl p-4 mb-8 border border-brand-purple/20 bg-brand-purple/5">
-                  <Clock size={18} className="text-brand-purple flex-shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 rounded-2xl p-4 mb-8 border border-brand-sky/20 bg-brand-sky/5">
+                  <Clock size={18} className="text-brand-sky flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-sm font-semibold text-brand-purple">After the launch period ends</p>
+                    <p className="text-sm font-semibold text-brand-violet">After the launch period ends</p>
                     <p className="text-sm text-muted-foreground">
-                      Plans will be available at just <strong className="text-foreground">₹200/month</strong>. Early users get exclusive discounts.
+                      Plans will be available at just <strong className="text-brand-dark">₹200/month</strong>. Early users get exclusive discounts.
                     </p>
                   </div>
                 </div>
@@ -64,8 +65,8 @@ export default function Pricing() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                   {freeFeatures.map((f) => (
                     <div key={f} className="flex items-center gap-3 text-sm">
-                      <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-brand-purple/10">
-                        <Check size={12} className="text-brand-purple" />
+                      <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 bg-brand-sky/10">
+                        <Check size={12} className="text-brand-sky" />
                       </div>
                       <span className="text-foreground">{f}</span>
                     </div>
@@ -73,7 +74,8 @@ export default function Pricing() {
                 </div>
 
                 <a href="#download"
-                  className="flex items-center justify-center gap-3 w-full rounded-2xl py-4 text-base font-bold bg-gradient-orange text-white shadow-orange hover:opacity-90 transition-opacity"
+                  className="flex items-center justify-center gap-3 w-full rounded-2xl py-4 text-base font-bold bg-brand-purple text-white"
+                  style={{ boxShadow: "0 4px 16px hsl(var(--brand-purple) / 0.2)" }}
                 >
                   <Gift size={20} />
                   Get Free Access Now

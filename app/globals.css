@@ -2,6 +2,7 @@
 @plugin "tailwindcss-animate";
 
 @theme {
+  /* Core Colors */
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
@@ -10,37 +11,37 @@
 
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
-
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
-
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));
-
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
-
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
-
   --color-popover: hsl(var(--popover));
   --color-popover-foreground: hsl(var(--popover-foreground));
-
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
 
+  /* VendoNX Brand */
   --color-brand-purple: hsl(var(--brand-purple));
   --color-brand-purple-hover: hsl(var(--brand-purple-hover));
   --color-brand-purple-light: hsl(var(--brand-purple-light));
+
   --color-brand-violet: hsl(var(--brand-violet));
   --color-brand-violet-light: hsl(var(--brand-violet-light));
+
   --color-brand-sky: hsl(var(--brand-sky));
   --color-brand-sky-light: hsl(var(--brand-sky-light));
+
   --color-brand-dark: hsl(var(--brand-dark));
   --color-brand-dark-light: hsl(var(--brand-dark-light));
   --color-brand-dark-deep: hsl(var(--brand-dark-deep));
 
+  /* Legacy Aliases mapping to new values (for backward compatibility) */
   --color-brand-orange: hsl(var(--brand-orange));
+  --color-brand-orange-hover: hsl(var(--brand-orange-hover));
   --color-brand-orange-light: hsl(var(--brand-orange-light));
   --color-brand-yellow: hsl(var(--brand-yellow));
   --color-brand-yellow-light: hsl(var(--brand-yellow-light));
@@ -50,6 +51,7 @@
   --color-brand-blue-light: hsl(var(--brand-blue-light));
   --color-brand-blue-dark: hsl(var(--brand-blue-dark));
 
+  /* Sidebar */
   --color-sidebar: hsl(var(--sidebar-background));
   --color-sidebar-foreground: hsl(var(--sidebar-foreground));
   --color-sidebar-primary: hsl(var(--sidebar-primary));
@@ -59,6 +61,13 @@
   --color-sidebar-border: hsl(var(--sidebar-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
 
+  /* Section Backgrounds */
+  --color-section-white: hsl(var(--section-white));
+  --color-section-light: hsl(var(--section-light));
+  --color-section-warm: hsl(var(--section-warm));
+  --color-section-blue: hsl(var(--section-blue));
+
+  /* Radii */
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
@@ -66,20 +75,24 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 16px);
 
+  /* Fonts */
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-display: var(--font-poppins), var(--font-inter), system-ui, sans-serif;
 
+  /* Shadows */
   --shadow-sm: var(--shadow-sm);
   --shadow-md: var(--shadow-md);
   --shadow-lg: var(--shadow-lg);
   --shadow-orange: var(--shadow-orange);
   --shadow-blue: var(--shadow-blue);
 
+  /* Gradients */
   --background-image-gradient-hero: var(--gradient-hero);
   --background-image-gradient-orange: var(--gradient-orange);
   --background-image-gradient-card: var(--gradient-card);
   --background-image-gradient-crimson: var(--gradient-crimson);
 
+  /* Animations */
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
   --animate-fade-up: fade-up 0.6s ease-out forwards;
@@ -153,7 +166,6 @@
 
 :root {
   /* ================= Brand Colors ================= */
-
   --brand-purple: 286 75% 48%;
   --brand-purple-hover: 286 75% 42%;
   --brand-purple-light: 286 75% 95%;
@@ -169,7 +181,6 @@
   --brand-dark-deep: 236 60% 12%;
 
   /* ================= Legacy Aliases ================= */
-
   --brand-orange: var(--brand-purple);
   --brand-orange-hover: var(--brand-purple-hover);
   --brand-orange-light: var(--brand-purple-light);
@@ -185,7 +196,6 @@
   --brand-blue-dark: var(--brand-dark-deep);
 
   /* ================= Semantic Tokens ================= */
-
   --background: 0 0% 100%;
   --foreground: 236 60% 12%;
 
@@ -217,7 +227,6 @@
   --radius: 0.75rem;
 
   /* ================= Sidebar ================= */
-
   --sidebar-background: 0 0% 98%;
   --sidebar-foreground: 240 5.3% 26.1%;
   --sidebar-primary: 240 5.9% 10%;
@@ -228,33 +237,18 @@
   --sidebar-ring: 217.2 91.2% 59.8%;
 
   /* ================= Section Backgrounds ================= */
-
   --section-white: 0 0% 100%;
   --section-light: 236 20% 97%;
   --section-warm: 286 30% 97%;
   --section-blue: 236 60% 18%;
 
   /* ================= Gradients ================= */
-
-  --gradient-hero: linear-gradient(135deg,
-      hsl(236 87% 38%) 0%,
-      hsl(286 75% 48%) 50%,
-      hsl(194 96% 53%) 100%);
-
-  --gradient-orange: linear-gradient(135deg,
-      hsl(286 75% 48%) 0%,
-      hsl(236 87% 48%) 100%);
-
-  --gradient-card: linear-gradient(145deg,
-      hsl(0 0% 100%) 0%,
-      hsl(236 20% 97%) 100%);
-
-  --gradient-crimson: linear-gradient(135deg,
-      hsl(236 87% 48%) 0%,
-      hsl(286 75% 48%) 100%);
+  --gradient-hero: linear-gradient(135deg, hsl(236 87% 38%) 0%, hsl(286 75% 48%) 50%, hsl(194 96% 53%) 100%);
+  --gradient-orange: linear-gradient(135deg, hsl(286 75% 48%) 0%, hsl(236 87% 48%) 100%);
+  --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(236 20% 97%) 100%);
+  --gradient-crimson: linear-gradient(135deg, hsl(236 87% 48%) 0%, hsl(286 75% 48%) 100%);
 
   /* ================= Shadows ================= */
-
   --shadow-sm: 0 1px 3px hsl(286 75% 48% / 0.08);
   --shadow-md: 0 4px 16px hsl(286 75% 48% / 0.12);
   --shadow-lg: 0 8px 32px hsl(286 75% 48% / 0.16);
@@ -262,23 +256,7 @@
   --shadow-blue: 0 4px 20px hsl(236 60% 18% / 0.35);
 }
 
-.dark {
-  --background: 236 60% 12%;
-  --foreground: 0 0% 100%;
 
-  --card: 236 60% 18%;
-  --card-foreground: 0 0% 100%;
-
-  --popover: 236 60% 18%;
-  --popover-foreground: 0 0% 100%;
-
-  --primary: 286 75% 58%;
-  --secondary: 194 96% 63%;
-  --muted: 236 30% 20%;
-  --muted-foreground: 236 20% 70%;
-
-  --border: 236 30% 25%;
-}
 
 /* =====================================================
    Base Styles (Tailwind v4 Safe - NO @apply here)
@@ -302,4 +280,76 @@ h1,
 h2,
 h3 {
   font-family: var(--font-poppins), var(--font-inter), system-ui, sans-serif;
+}
+
+@layer components {
+  .btn-orange {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    background: var(--gradient-orange);
+    color: hsl(0 0% 100%);
+    box-shadow: var(--shadow-orange);
+  }
+
+  .btn-orange:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px hsl(286 75% 48% / 0.45);
+  }
+
+  .btn-orange:active {
+    transform: translateY(0);
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl font-semibold border-2 transition-all duration-200;
+    border-color: hsl(0 0% 100% / 0.6);
+    color: hsl(0 0% 100%);
+    background: hsl(0 0% 100% / 0.1);
+  }
+
+  .btn-outline-white:hover {
+    background: hsl(0 0% 100% / 0.2);
+    border-color: hsl(0 0% 100%);
+  }
+
+  .section-white {
+    background: hsl(var(--section-white));
+  }
+
+  .section-light {
+    background: hsl(var(--section-light));
+  }
+
+  .section-warm {
+    background: hsl(var(--section-warm));
+  }
+
+  .section-blue {
+    background: hsl(var(--brand-blue));
+  }
+
+  .feature-card {
+    @apply rounded-2xl p-6 transition-all duration-300;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .feature-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+    border-color: hsl(var(--brand-orange) / 0.3);
+  }
+
+  .stat-card {
+    @apply text-center px-8 py-6;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium transition-colors duration-200;
+    color: hsl(var(--foreground) / 0.75);
+  }
+
+  .nav-link:hover {
+    color: hsl(var(--brand-orange));
+  }
 }

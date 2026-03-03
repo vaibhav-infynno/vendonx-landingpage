@@ -19,21 +19,21 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-14 md:py-20 relative overflow-hidden bg-gradient-to-br from-background to-muted/80">
+    <section id="faq" className="py-14 md:py-20 bg-background relative overflow-hidden">
       
-      <div className="absolute top-[-50px] right-[-50px] w-72 h-72 rounded-full opacity-10 blur-3xl pointer-events-none bg-brand-purple" />
+      <div className="absolute top-[-50px] right-[-50px] w-72 h-72 rounded-full opacity-10 blur-3xl pointer-events-none bg-brand-violet" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           <div className="lg:w-[360px] flex-shrink-0">
             <FadeIn>
               <div className="lg:sticky lg:top-32">
-                <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest border border-brand-purple/30 text-brand-purple bg-brand-purple/5">
+                <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest border border-brand-violet/20 text-brand-violet bg-brand-violet/5">
                   ✦ FAQ
                 </div>
-                <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-foreground">
+                <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-brand-dark">
                   Got Questions?{" "}
-                  <span className="text-brand-purple">We've Got Answers.</span>
+                  <span className="text-brand-violet">We've Got Answers.</span>
                 </h2>
                 <p className="text-base text-muted-foreground">
                   Everything you need to know about VendoNX. Can't find what you're looking for? Contact us below.
@@ -47,11 +47,12 @@ export default function FAQ() {
               {faqs.map((faq, i) => {
                 const isOpen = open === i;
                 return (
-                  <div key={i} className={`rounded-2xl border overflow-hidden transition-all duration-300 ${isOpen ? 'border-brand-purple/40 bg-card shadow-lg shadow-brand-purple/5' : 'border-border bg-card/70 hover:bg-card'}`}>
+                  <div key={i} className={`rounded-2xl border overflow-hidden transition-all duration-300 ${isOpen ? 'border-brand-violet/30 bg-background' : 'border-border bg-background'}`}
+                    style={{ boxShadow: isOpen ? "0 4px 20px hsl(0 0% 0% / 0.05)" : "none" }}>
                     <button className="w-full flex items-center justify-between p-5 text-left gap-4 min-h-[56px]"
                       onClick={() => setOpen(isOpen ? null : i)} aria-expanded={isOpen}>
-                      <h3 className="font-display font-semibold text-base text-foreground">{faq.q}</h3>
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-200 ${isOpen ? 'bg-brand-purple text-white' : 'bg-brand-purple/10 text-brand-purple'}`}>
+                      <h3 className="font-display font-semibold text-base text-brand-dark">{faq.q}</h3>
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-200 ${isOpen ? 'bg-brand-violet text-white' : 'bg-brand-violet/10 text-brand-violet'}`}>
                         {isOpen ? <Minus size={16} /> : <Plus size={16} />}
                       </div>
                     </button>

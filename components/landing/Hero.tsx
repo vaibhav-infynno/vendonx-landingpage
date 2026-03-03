@@ -4,11 +4,10 @@ import PhoneFrame from "./PhoneFrame";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-28 bg-gradient-to-br from-background via-brand-purple-light to-brand-sky-light">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20 bg-background" aria-label="Hero">
       
-      {/* Decorative blur blobs */}
-      <div className="absolute -top-24 -left-16 w-96 h-96 bg-brand-purple/20 rounded-full blur-3xl pointer-events-none animate-blob" />
-      <div className="absolute -bottom-20 right-1/4 w-80 h-80 bg-brand-sky/20 rounded-full blur-3xl pointer-events-none animate-blob [animation-delay:1s]" />
+      {/* Decorative blur blob */}
+      <div className="absolute top-[-100px] right-[5%] w-[500px] h-[500px] bg-brand-sky/6 rounded-full blur-3xl pointer-events-none animate-blob" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 py-16">
         <div className="flex flex-col lg:flex-row items-center gap-14 xl:gap-50">
@@ -18,17 +17,17 @@ export default function Hero() {
 
             {/* Badge */}
             <FadeIn>
-              <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6 text-sm font-semibold bg-brand-purple-light text-brand-purple border border-brand-purple">
+              <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-6 text-sm font-semibold border border-brand-sky/25 bg-brand-sky/10 text-brand-violet">
                 <Star size={14} fill="currentColor" stroke="none" />
-                Trusted by 1,000+ vendors across India
+                <span>Trusted by 1,000+ vendors across India</span>
               </div>
             </FadeIn>
 
             {/* Heading */}
             <FadeIn delay={0.1}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-foreground">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5 text-brand-dark">
                 Manage Your Service{" "}
-                <span className="bg-gradient-orange bg-clip-text text-transparent">
+                <span className="text-brand-violet">
                   Business
                 </span>{" "}
                 Smarter with VendoNX
@@ -37,7 +36,7 @@ export default function Hero() {
 
             {/* Description */}
             <FadeIn delay={0.2}>
-              <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
                 Customer tracking, AMC plans, invoices & earnings — one simple app for Indian service professionals.
               </p>
             </FadeIn>
@@ -48,18 +47,18 @@ export default function Hero() {
                 
                 <a
                   href="#download"
-                  className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-brand-purple to-brand-violet text-white px-8 py-4 rounded-2xl font-semibold text-base shadow-orange hover:opacity-90 hover:scale-[1.02] transition-all"
+                  className="inline-flex items-center justify-center gap-3 rounded-2xl px-8 py-4 text-base font-bold min-h-[56px] transition-all duration-300 group bg-brand-purple text-white shadow-orange hover:-translate-y-0.5"
                 >
-                  <Download size={20} strokeWidth={2} />
+                  <Download size={20} />
                   Download for Android
-                  <ArrowRight size={18} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                 </a>
 
                 <a
                   href="#download"
-                  className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-semibold text-base border-2 border-brand-purple text-brand-purple bg-brand-purple/5 hover:bg-brand-purple/10 hover:border-brand-purple/40 hover:scale-[1.02] transition-all"
+                  className="inline-flex items-center justify-center gap-3 rounded-2xl px-8 py-4 text-base font-semibold min-h-[56px] border-2 border-border text-brand-dark bg-background hover:bg-muted transition-all duration-300"
                 >
-                  <Download size={20} strokeWidth={2} />
+                  <Download size={20} />
                   Download for iOS
                 </a>
               </div>
@@ -72,7 +71,7 @@ export default function Hero() {
                   {[1, 2, 3, 4, 5].map((i) => (
                     <Star key={i} size={16} fill="currentColor" stroke="none" className="text-brand-sky" />
                   ))}
-                  <span className="ml-2 font-bold text-sm text-foreground">
+                  <span className="ml-2 font-bold text-sm text-brand-dark">
                     4.8 / 5
                   </span>
                 </div>
@@ -86,20 +85,18 @@ export default function Hero() {
             </FadeIn>
           </div>
 
-
-
           {/* Right Phone */}
           <div className="flex-shrink-0 relative">
             <FadeIn delay={0.3} direction="down" duration={0.8}>
-              <PhoneFrame size="lg" glow alt="VendoNX app dashboard preview" priority />
+              <PhoneFrame size="lg" glow alt="VendoNX app dashboard preview" />
 
               {/* Floating Tags */}
-              <div className="absolute -top-4 -right-8 bg-card text-brand-purple text-xs font-bold px-4 py-2 rounded-xl shadow-md border border-border">
+              <div className="absolute -top-3 -right-8 bg-background text-brand-violet text-xs font-bold px-3.5 py-2 rounded-xl shadow-md z-20">
                 ⚡ Free Download
               </div>
 
-              <div className="absolute -bottom-4 -left-8 bg-card border border-border px-4 py-2 rounded-xl shadow-md">
-                <div className="text-xs font-semibold text-foreground">
+              <div className="absolute -bottom-3 -left-8 bg-background border border-border px-3.5 py-2 rounded-xl shadow-md z-20">
+                <div className="text-xs font-semibold text-brand-dark">
                   1,000+ Vendors
                 </div>
                 <div className="flex mt-1 gap-0.5">
@@ -113,15 +110,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 60" className="w-full">
-          <path
-            d="M0 60L1440 60L1440 30C1200 60 720 0 0 30L0 60Z"
-            fill="white"
-          />
-        </svg>
-      </div>
+
     </section>
   );
 }
